@@ -1,0 +1,61 @@
+/* 
+
+body {
+
+    font-family: 'Helvetica';
+    color: black;
+
+    opacity: 0.5;
+}
+
+p {
+
+    opacity: 1;
+    font-size: 1rem;
+}
+
+body::after {
+    content: "";
+    background-image: url("../images/desk-background.jpg");
+    background-repeat: repeat-y;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+} */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+h1 {
+    background-color: orangered;
+    font-size: 30px;
+}
+
+h2 {
+    background-color: lightblue;
+    font-size: 25px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 18px;
+}
+
+.caption-name {
+
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.caption-title {
+    font-size: 13px;
+}
