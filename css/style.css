@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     /* font for text */
     font-family: Arial, Helvetica, sans-serif;
@@ -51,12 +55,13 @@ p {
 }
 
 .caption-name {
-    font-size: 15px;
+    font-size: 20px;
     font-weight: bold;
+
 }
 
 .caption-title {
-    font-size: 13px;
+    font-size: 15px;
 }
 
 img {
@@ -80,7 +85,33 @@ nav {
     z-index: 1000000000;
 }
 
+/* applies to <li> elements inside a <nav> element */
 nav li {
     display: inline;
     margin-right: 1rem;
+}
+
+.nav_item {
+    /* remove the underline for a hyperlink */
+    text-decoration: none;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.flex-item {
+
+    padding: 1rem;
+
+    text-align: center;
+
+}
+
+.staff-category-text {
+    font-weight: bold;
+    font-size: 40px;
+    margin: 7rem;
 }
