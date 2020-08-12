@@ -140,6 +140,8 @@ nav li {
 .slideshow-container {
     max-width: 600px;
     max-height: 400px;
+
+    margin: 5rem;
 }
 
 .slides {
@@ -147,6 +149,9 @@ nav li {
     height: 400px;
     object-fit: cover;
     display: none;
+
+    /* rounded corners */
+    border-radius: 3rem;
 }
 
 /* .background {

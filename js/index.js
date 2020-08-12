@@ -29,11 +29,3 @@ function slideshow() {
     // Wait two seconds before displaying the next image
     setTimeout(slideshow, 2000);
 }
-
-// Multiply two numbers
-function multiply(n1, n2) {
-    let x = n1 * n2;
-    console.log(x);
-}
-
-multiply(2, 3); // Printed in console: 6 
