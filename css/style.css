@@ -27,23 +27,25 @@ body {
     /* for background image */
     display: block;
     position: relative;
-
-    margin-left:
 }
 
 .footer {
     /* for sticky footer */
     flex-shrink: 0;
 
+    /* thickness of footer */
     padding: .5rem;
     background-color: #16243b;
     color: white;
+
+    border-top: .15rem solid #e75d14;
+    box-shadow: 0px 1px 5px black;
 }
 
 .background::after {
     /* for background image */
     content: "";
-    background-image: url("../images/desk-background.jpg");
+    background-image: url("../images/wood-background2.jpg");
     background-repeat: repeat-y;
     opacity: 0.5;
     top: 0;
@@ -53,6 +55,11 @@ body {
     position: absolute;
     z-index: -1;
 }
+
+/* .content {
+    margin-left: 5rem;
+    margin-right: 5rem; 
+} */
 
 h1 {
     font-size: 30px;
@@ -76,35 +83,20 @@ p {
     font-size: 18px;
 }
 
-.caption-name {
-    font-size: 20px;
-    font-weight: bold;
-
-}
-
-.caption-title {
-    font-size: 15px;
-}
-
-.team-portrait {
-    float: none;
-    width:  300px;
-    height: 300px;
-    object-fit: cover;
-
-    border-radius: 3rem; 
-}
-
 nav {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+
+    /* navbar thickness */
     padding: .75rem;
+
     background-color: #16243b;
     z-index: 1000000000;
 
     border-bottom: .15rem solid #e75d14;
+    box-shadow: 0px 1px 5px black;
 }
 
 nav ul {
@@ -124,6 +116,11 @@ nav li {
     text-decoration: none;
 }
 
+/* nav links will change color on hover */
+.nav_item:hover {
+    color: #e75d14;
+}
+
 #logo {
     position: fixed;
     top: .25rem;
@@ -139,15 +136,51 @@ nav li {
     justify-content: center;
 }
 
+.odd-background {
+    background-color:rgb(132, 141, 156);
+}
+
+.even-background {
+    background-color: rgb(229, 230, 233);
+}
+
 .flex-item {
     padding: 1rem;
     text-align: center;
 }
 
+.caption-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+.caption-title {
+    font-size: 15px;
+    margin-top: .5rem;
+    margin-bottom: 0;
+}
+
+.team-portrait {
+    float: none;
+    width:  275px;
+    height: 275px;
+    object-fit: cover;
+
+    /* rounded corners */
+    border-radius: 3rem; 
+
+    border: .10rem solid #e75d14;
+    box-shadow: 0px .5px 5px black;
+}
+
 .staff-category-text {
     font-weight: bold;
     font-size: 40px;
-    margin: 7rem;
+    margin: 0rem 2rem;
+    padding: 8rem 0rem;
+    text-align: center;
 }
 
 .slideshow-container {
@@ -166,3 +199,4 @@ nav li {
     /* rounded corners */
     border-radius: 3rem;
 }
+
