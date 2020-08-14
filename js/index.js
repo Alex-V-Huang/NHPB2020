@@ -29,3 +29,23 @@ function slideshow() {
     // Wait two seconds before displaying the next image
     setTimeout(slideshow, 2000);
 }
+
+var slideIndex2 = 0;
+
+function currentImage(number) {
+    slideIndex2 = number;
+    showImage(slideIndex);
+}
+
+function showImage(n) {
+    // Select all images in the second slideshow
+    var x = document.getElementsByClassName("slides2");
+
+    // Hide all images from displaying on page
+    for (var i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+
+    // Display the selected image
+    x[slideIndex2-1].style.display = "block";
+}
