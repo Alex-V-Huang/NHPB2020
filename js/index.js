@@ -30,6 +30,23 @@ function slideshow() {
     setTimeout(slideshow, 2000);
 }
 
+function changeImageSize() {
+    let width = document.getElementById('width').value;
+    let height = document.getElementById('height').value;
+
+    let slides = document.getElementsByClassName('slides');
+    for (var i = 0; i < slides.length; i++) {
+        slides[i].style.width = width;
+        slides[i].style.height = height;
+    }
+
+    let p = document.createElement("p");
+    p.innerHTML = "You have changed the image to " + width + " by " + height + ".";
+
+    let results = document.getElementById("results");
+    results.appendChild(p);
+}
+
 var slideIndex2 = 0;
 
 function currentImage(number) {

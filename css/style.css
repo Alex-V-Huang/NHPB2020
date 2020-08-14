@@ -248,3 +248,11 @@ nav li {
 .slideshow-selector:hover {
     opacity: 0.7;
 }
+
+.container-change-image-size {
+    margin-left: 5rem;
+}
+
+button {
+    margin-top: 1rem;
+}
