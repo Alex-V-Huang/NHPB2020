@@ -74,7 +74,7 @@ function goRandomWebsite() {
     console.log(websites);
 
     // Choose a website by random
-    let randomNumber = Math.floor(Math.random() * 6);
+    let randomNumber = Math.floor(Math.random() * websites.length);
     console.log(randomNumber);
 
     // Get the selected website
