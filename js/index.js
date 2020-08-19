@@ -66,3 +66,24 @@ function showImage(n) {
     // Display the selected image
     x[slideIndex2-1].style.display = "block";
 }
+
+// Write a function that chooses a random website and opens it in a new tab
+function goRandomWebsite() {
+    // Get all of the websites
+    let websites = document.getElementsByClassName("project-link");
+    console.log(websites);
+
+    // Choose a website by random
+    let randomNumber = Math.floor(Math.random() * 6);
+    console.log(randomNumber);
+
+    // Get the selected website
+    let selectedWebsite = websites[randomNumber];
+
+    // Get the url of the selected website
+    let url = selectedWebsite.getAttribute("href");
+    console.log(url);
+
+    // Open the url in a new tab
+    window.open(url, "_blank");
+}
