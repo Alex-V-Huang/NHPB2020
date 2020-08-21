@@ -3,7 +3,10 @@
 
 // variable dedicated to current displayed image index
 var slideIndex = 0;
-slideshow();
+
+if (window.location.href.indexOf('merch') > -1) {
+    slideshow();
+}
 
 function slideshow() {
 
@@ -69,4 +72,33 @@ function goRandomWebsite() {
 
     // Open the url in a new tab
     window.open(url, "_blank");
+}
+
+// When the user clicks the button, open the modal 
+function openModal() {
+
+    console.log(this);
+    // Get the modal
+    let modal = document.getElementById("myModal");
+    // Display the modal on the page
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+function closeModal() {
+    // Get the modal
+    let modal = document.getElementById("myModal");
+    // Hide the modal from displaying on the page
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    // Get the modal
+    let modal = document.getElementById("myModal");
+    // If user clicked anywhere outside of the modal
+    if (event.target == modal) {
+        // Hide the modal from displaying on the page
+        modal.style.display = "none";
+    }
 }

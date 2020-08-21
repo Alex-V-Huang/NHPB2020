@@ -56,11 +56,6 @@ body {
     z-index: -1;
 }
 
-/* .content {
-    margin-left: 5rem;
-    margin-right: 5rem; 
-} */
-
 h1 {
     background-color: #e75d14;
     font-size: 35px;
@@ -211,15 +206,9 @@ nav li {
 
 .slides2 {
     width: 600px; 
-
     height: 400px;
-    /* max-width: 100%;
-
-    height: auto; */
     object-fit: cover;
-
     display: none;
-
     border-radius: 3rem;
 }
 
@@ -254,11 +243,11 @@ nav li {
     margin-left: 5rem;
 }
 
-button {
+/* button {
     margin-top: 1rem;
     margin-left: 5rem;
     margin-bottom: 3rem;
-}
+} */
 
 .project-card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -273,6 +262,7 @@ button {
 
 .project-card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    cursor: pointer;
 }
 
 .grid {
@@ -313,7 +303,8 @@ button {
 }
 
 .project-info {
-    height: 8rem;
+    /* height: 8rem; */
+    height: 6rem;
     padding: 0.10rem 3.5rem;
     background-color: white;
 
@@ -375,4 +366,50 @@ button {
 
 .circle {
     border-radius: 50%;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10000000000000000; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.go-to-project {
+    font-size: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+
+    padding: 15px 32px;
 }
