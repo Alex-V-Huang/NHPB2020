@@ -53,33 +53,42 @@ function showImage(n) {
     x[slideIndex2-1].style.display = "block";
 }
 
-// Write a function that chooses a random website and opens it in a new tab
-function goRandomWebsite() {
-    // Get all of the websites
-    let websites = document.getElementsByClassName("project-link");
-    console.log(websites);
-
-    // Choose a website by random
-    let randomNumber = Math.floor(Math.random() * websites.length);
-    console.log(randomNumber);
-
-    // Get the selected website
-    let selectedWebsite = websites[randomNumber];
-
-    // Get the url of the selected website
-    let url = selectedWebsite.getAttribute("href");
-    console.log(url);
-
-    // Open the url in a new tab
-    window.open(url, "_blank");
-}
-
 // When the user clicks the button, open the modal 
-function openModal() {
+function openModal(card) {
 
-    console.log(this);
+    let image = card.children[0].cloneNode(true);
+    let info = card.children[1].cloneNode(true);
+    
     // Get the modal
     let modal = document.getElementById("myModal");
+
+    // Reveal the description in project info
+    let desc = info.children[2];
+    desc.style.display = "block";
+
+    // Get div.project-modal in the modal
+    let div = modal.children[0].children[1];
+
+    // If necessary, remove previous modal's project info 
+    while (div.hasChildNodes()) {  
+        div.removeChild(div.firstChild);
+    }
+
+    // Add the project logo and info
+    div.appendChild(image);
+    div.appendChild(info);
+
+    // Get the project URL
+    let a = info.children[3];
+    let url = a.getAttribute("href");
+    url = '"' + url + '"';
+
+    // Get the button
+    let button = modal.children[0].children[2];
+
+    // Set button's external link to project URL
+    button.setAttribute("onClick", "openWebsite(" + url + ")");
+
     // Display the modal on the page
     modal.style.display = "block";
 }
@@ -101,4 +110,8 @@ window.onclick = function(event) {
         // Hide the modal from displaying on the page
         modal.style.display = "none";
     }
+}
+
+function openWebsite(url) {
+    window.open(url, '_blank');
 }

@@ -98,6 +98,7 @@ nav {
 nav ul {
     /* shift nav links to the right of the logo */
     margin-left: 7rem;
+    padding-top: 0.5rem;
 }
 
 /* applies to <li> elements inside a <nav> element */
@@ -338,6 +339,7 @@ nav li {
 
 .project-desc {
     font-size: 16px;
+    display: none;
 }
 
 #github {
